@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Function Demonstration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sender">
+            <h2>Sender</h2>
+            <textarea id="senderMessage" placeholder="Enter your message"></textarea>
+            <button id="generateHash">Generate Hash</button>
+            <p>Generated Hash: <span id="senderHash"></span></p>
+            <button id="sendMessage">Send Message</button>
+        </div>
+
+        <div class="receiver">
+            <h2>Receiver</h2>
+            <p>Received Message: <span id="receivedMessage"></span></p>
+            <p>Received Hash: <span id="receivedHash"></span></p>
+            <button id="verifyHash">Verify Hash</button>
+            <p>Verification Result: <span id="verificationResult"></span></p>
+        </div>
+
+        <div class="attacker">
+            <h2>Man in the Middle</h2>
+            <textarea id="interceptedMessage" placeholder="Intercepted message"></textarea>
+            <button id="modifyMessage">Modify Message</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
